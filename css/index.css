@@ -1,0 +1,13 @@
+.content{
+	background:#666;
+	font-size:2rem;
+	width:95%;
+	margin:0 auto;
+}
+p
+{
+  /*width: 95%;
+  margin: 0 auto;
+  display: table;*/
+  text-align: center;
+}

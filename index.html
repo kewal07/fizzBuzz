@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, intial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<script  src="js/jquery.js"></script>	
+	</head>
+	<body>
+		<div class="content">
+			<p>
+				<script>
+				    var count = 0; 
+					var number = prompt("Enter a number <= 100 to demonstrate the FizzBuzz pattern");
+					if(number.length == 0){
+						alert("As you did not enter any number, we will start the count from 1 :) ");
+						number = 1;	
+					}
+					number = parseInt(number);
+					if(number <=100)
+					{
+						for(var i=number;i<=100;i++){
+							if(i%3 == 0){
+								$('.content p').append("Fizz,");
+								count++;
+							}
+							else if(i%5 == 0){
+								$('.content p').append("Buzz,");
+								count++;
+							}
+							else if(i%15 == 0){
+								$('.content p').append("FizzBuzz,");
+								count++;
+							}
+							else{
+								$('.content p').append(i+",");
+								count++;
+								if(count>30){
+									$('.content p').append("<br />");
+									count=0;
+								}
+							}
+						}
+					}
+					else{
+						alert("Input was not correct. Please refresh the page again");
+					}
+				</script>
+			</p>
+		</div>
+	</body>
+</html>
