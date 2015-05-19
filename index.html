@@ -12,14 +12,15 @@
 				    var count = 0; 
 					var number = prompt("Enter a number <= 100 to demonstrate the FizzBuzz pattern");
 					if(number.length == 0){
-						alert("As you did not enter any number, we will start the count from 1 :) ");
-						number = 1;	
+						alert("You did not enter anything. Please refresh the page and enter again :) ");
 					}
 					else{
 						fizzBuzz(number);
 					}
 					function fizzBuzz(number){
+						console.log(number);
 						number = parseInt(number);
+						console.log(number);
 						if(number%1 != 0 || number<0){
 							alert("Input was not correct. Please refresh the page again");
 						}
