@@ -15,34 +15,42 @@
 						alert("As you did not enter any number, we will start the count from 1 :) ");
 						number = 1;	
 					}
-					number = parseInt(number);
-					if(number <=100)
-					{
-						for(var i=number;i<=100;i++){
-							if(i%3 == 0){
-								$('.content p').append("Fizz,");
-								count++;
-							}
-							else if(i%5 == 0){
-								$('.content p').append("Buzz,");
-								count++;
-							}
-							else if(i%15 == 0){
-								$('.content p').append("FizzBuzz,");
-								count++;
-							}
-							else{
-								$('.content p').append(i+",");
-								count++;
-								if(count>30){
-									$('.content p').append("<br />");
-									count=0;
+					else{
+						fizzBuzz(number);
+					}
+					function fizzBuzz(number){
+						number = parseInt(number);
+						if(number%1 != 0 || number<0){
+							alert("Input was not correct. Please refresh the page again");
+						}
+						else if(number <=100)
+						{
+							for(var i=number;i<=100;i++){
+								if(i%3 == 0){
+									$('.content p').append("Fizz,");
+									count++;
+								}
+								else if(i%5 == 0){
+									$('.content p').append("Buzz,");
+									count++;
+								}
+								else if(i%15 == 0){
+									$('.content p').append("FizzBuzz,");
+									count++;
+								}
+								else{
+									$('.content p').append(i+",");
+									count++;
+									if(count>30){
+										$('.content p').append("<br />");
+										count=0;
+									}
 								}
 							}
 						}
-					}
-					else{
-						alert("Input was not correct. Please refresh the page again");
+						else{
+							alert("Input was not correct. Please refresh the page again");
+						}
 					}
 				</script>
 			</p>
